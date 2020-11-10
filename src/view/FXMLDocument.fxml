@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="277.0" prefWidth="410.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FXMLDocumentController">
+    <children>
+        <Button fx:id="createUser" layoutX="76.0" layoutY="27.0" onAction="#createUser" text="Create User" />
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <Button fx:id="updateUser" layoutX="74.0" layoutY="65.0" mnemonicParsing="false" onAction="#updateUser" text="Update User" />
+      <Button fx:id="readUserID" layoutX="75.0" layoutY="100.0" mnemonicParsing="false" onAction="#readUserByID" text="Read User by ID" />
+      <Button fx:id="deleteUser" layoutX="76.0" layoutY="137.0" mnemonicParsing="false" onAction="#deleteUser" text="Delete User" />
+      <!--<Button fx:id="findByNameAndAddress" layoutX="40.0" layoutY="169.0" mnemonicParsing="false" onAction="#findByNameAndAddress" text="Find by Name &amp; Address" />
+      <Button fx:id="createPackageRoute" layoutX="225.0" layoutY="77.0" mnemonicParsing="false" onAction="#createPackageRoute" text="Create Package Route" />
+      <Button fx:id="updatePackageRoute" layoutX="225.0" layoutY="137.0" mnemonicParsing="false" onAction="#updatePackageRoute" text="Update Package Route" />
+      <Button fx:id="deletePackageRoute" layoutX="225.0" layoutY="169.0" mnemonicParsing="false" onAction="#deletePackageRoute" text="Delete Package Route" />
+      <Button fx:id="readPackageRouteByID" layoutX="225.0" layoutY="107.0" mnemonicParsing="false" onAction="#readPackageRouteByID" text="Read Package Route by ID" />-->
+    </children>
+</AnchorPane>
