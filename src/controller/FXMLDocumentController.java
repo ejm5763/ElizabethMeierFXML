@@ -51,6 +51,10 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private Button deleteUser;
     
+        @FXML
+    private Button searchUserButton;
+    
+    
     //@FXML
     //private Button findByNameAndAddress;
 
@@ -371,6 +375,11 @@ public class FXMLDocumentController implements Initializable {
         //database reference: "IntroJavaFXPU"
         manager = (EntityManager) Persistence.createEntityManagerFactory("IntroJavaFXPU").createEntityManager();
     }    
+    
+     @FXML
+    void searchUser(ActionEvent event) {
+        System.out.println("Clicked");
+    }
 
 }
 
