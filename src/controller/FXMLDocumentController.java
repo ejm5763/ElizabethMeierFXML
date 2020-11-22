@@ -170,7 +170,7 @@ public class FXMLDocumentController implements Initializable {
         Usermodel selectedUser = userTable.getSelectionModel().getSelectedItem();
         
         //fxml loader
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/DetailModelView.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/DetailedModelView.fxml"));
         
         //load ui elements
         Parent detailedModelView = loader.load();
@@ -179,7 +179,7 @@ public class FXMLDocumentController implements Initializable {
         Scene tableViewScene = new Scene(detailedModelView);
         
         //access detailedControlled and call method
-        DetailModelController detailedControlled = loader.getController();
+        DetailedModelViewController detailedControlled = loader.getController();
         
         detailedControlled.initData(selectedUser);
         
@@ -197,7 +197,7 @@ public class FXMLDocumentController implements Initializable {
         Usermodel selectedUser = userTable.getSelectionModel().getSelectedItem();
         
         //fxml loader
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/DetailModelView.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/DetailedModelView.fxml"));
         
         //load ui
         Parent detailedModelView = loader.load();
@@ -205,8 +205,8 @@ public class FXMLDocumentController implements Initializable {
         //load scene
         Scene tableViewScene = new Scene(detailedModelView);
         
-        //access detailedControlled call method
-        DetailModelController detailedControlled = loader.getController;
+        //access detailedControlled and call method
+        DetailedModelViewController detailedControlled = loader.getController();
     
         detailedControlled.initData(selectedUser);
         
@@ -285,6 +285,11 @@ public class FXMLDocumentController implements Initializable {
     
     public List<Usermodel> readByName(String name) {
         Query query = manager.createNamedQuery("Usermodel.findByName");
+        
+        //i was following this code but I've been getting the same error here for literally 3 days so i give up
+        //i asked in the discussion board but I think no one else got the error so i never got help
+        //this was my error
+        //Caused by: java.lang.IllegalArgumentException: NamedQuery of name: Usermodel.findByName not found.
 
         // setting query parameter
         query.setParameter("name", name);
@@ -427,6 +432,9 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     void readByName(ActionEvent event) {
+        
+        System.out.println("clicked");
+        
         Scanner input = new Scanner(System.in);
 
         // read input from command line
@@ -458,6 +466,7 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     void readUser(ActionEvent event) {
+        readAll();
 
     }
      

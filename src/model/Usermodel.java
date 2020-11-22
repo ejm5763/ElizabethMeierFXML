@@ -20,7 +20,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author Owner
  */
 @Entity
-@Table(name = "USERMODEL")
+@Table(name = "USERTABLE")
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "Usermodel.findAll", query = "SELECT u FROM Usermodel u")
@@ -28,7 +28,10 @@ import javax.xml.bind.annotation.XmlRootElement;
     , @NamedQuery(name = "Usermodel.findByName", query = "SELECT u FROM Usermodel u WHERE u.name = :name")
     , @NamedQuery(name = "Usermodel.findByEmail", query = "SELECT u FROM Usermodel u WHERE u.email = :email")
     , @NamedQuery(name = "Usermodel.findByAddress", query = "SELECT u FROM Usermodel u WHERE u.address = :address")
-    , @NamedQuery(name = "Usermodel.findByPhonenumber", query = "SELECT u FROM Usermodel u WHERE u.phonenumber = :phonenumber")})
+    , @NamedQuery(name = "Usermodel.findByPhonenumber", query = "SELECT u FROM Usermodel u WHERE u.phonenumber = :phonenumber")
+
+    , @NamedQuery(name = "Usermodel.findByNameAdvanced", query = "SELECT u FROM Usermodel u WHERE  LOWER(u.name) LIKE  CONCAT('%', LOWER(:name), '%')")})
+
 public class Usermodel implements Serializable {
 
     private static final long serialVersionUID = 1L;
