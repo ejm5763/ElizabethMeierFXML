@@ -76,6 +76,9 @@ public class FXMLDocumentController implements Initializable {
     
     @FXML
     private Button searchUserButton;
+    
+    @FXML 
+    private Button advancedSearch;
 
     @FXML
     private TableView<Usermodel> userTable;
@@ -321,13 +324,13 @@ public class FXMLDocumentController implements Initializable {
     }
     
     public List<Usermodel> readByNameAdvanced(String name){
-        Query query = manager.createNamedQuery("Student.findByNameAdvanced");
+        Query query = manager.createNamedQuery("Usermodel.findByNameAdvanced");
         
         query.setParameter("name", name);
         
         List<Usermodel> users = query.getResultList();
         for (Usermodel user: users){
-            System.out.println(user.getId() + " " + user.getName() + " " + user.getEmail());      
+            System.out.println(user.getId() + " " + user.getName() + " " + user.getEmail() + "" + user.getAddress() + "" + user.getPhonenumber());      
         }
         return users;
     }
