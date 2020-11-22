@@ -363,7 +363,7 @@ public class FXMLDocumentController implements Initializable {
         List<Usermodel> users = query.getResultList();
 
         for (Usermodel s : users) {
-            System.out.println(s.getId() + " " + s.getName() + " " + s.getEmail());
+            System.out.println(s.getId() + " " + s.getName() + " " + s.getEmail() + s.getAddress() + " " + s.getPhonenumber());
         }
 
         return users;
