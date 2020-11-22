@@ -11,24 +11,27 @@
 
 <AnchorPane id="AnchorPane" prefHeight="496.0" prefWidth="684.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FXMLDocumentController">
     <children>
-        <Button fx:id="createUser" layoutX="76.0" layoutY="27.0" onAction="#createUser" text="Create User" />
+        <Button fx:id="createUser" layoutX="48.0" layoutY="26.0" onAction="#createUser" text="Create User" />
         <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
-      <Button fx:id="updateUser" layoutX="74.0" layoutY="65.0" mnemonicParsing="false" onAction="#updateUser" text="Update User" />
-      <Button fx:id="readUserID" layoutX="75.0" layoutY="100.0" mnemonicParsing="false" onAction="#readUserByID" text="Read User by ID" />
-      <Button fx:id="deleteUser" layoutX="76.0" layoutY="137.0" mnemonicParsing="false" onAction="#deleteUser" text="Delete User" />
-      <TableView layoutX="25.0" layoutY="213.0" prefHeight="258.0" prefWidth="633.0">
+      <Button fx:id="updateUser" layoutX="46.0" layoutY="103.0" mnemonicParsing="false" onAction="#updateUser" text="Update User" />
+      <Button fx:id="readUserID" layoutX="48.0" layoutY="64.0" mnemonicParsing="false" onAction="#readUserByID" text="Read User by ID" />
+      <Button fx:id="deleteUser" layoutX="48.0" layoutY="137.0" mnemonicParsing="false" onAction="#deleteUser" text="Delete User" />
+      <TableView fx:id="userTable" layoutX="25.0" layoutY="213.0" prefHeight="258.0" prefWidth="633.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="User ID" />
-          <TableColumn prefWidth="140.00006866455078" text="Name" />
-            <TableColumn prefWidth="143.3332977294922" text="Email" />
-            <TableColumn prefWidth="166.00003051757812" text="Address" />
-            <TableColumn prefWidth="108.66668701171875" text="Phone Number" />
+          <TableColumn fx:id="tableUserID" prefWidth="75.0" text="User ID" />
+          <TableColumn fx:id="tableUserName" prefWidth="140.00006866455078" text="Name" />
+            <TableColumn fx:id="tableUserEmail" prefWidth="143.3332977294922" text="Email" />
+            <TableColumn fx:id="tableUserAddress" prefWidth="166.00003051757812" text="Address" />
+            <TableColumn fx:id="tableUserPhone" prefWidth="108.66668701171875" text="Phone Number" />
         </columns>
       </TableView>
       <Button fx:id="searchUserButton" layoutX="290.0" layoutY="183.0" mnemonicParsing="false" onAction="#searchUser" text="Search" />
       <Text layoutX="76.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="By ID " />
-      <TextField layoutX="121.0" layoutY="183.0" text="Enter User ID" />
+      <TextField fx:id="searchBar" layoutX="121.0" layoutY="183.0" text="Enter User ID" />
       <Line endX="503.66668701171875" endY="1.52587890625E-5" layoutX="153.0" layoutY="174.0" startX="-126.33333587646484" startY="1.52587890625E-5" />
+      <Button fx:id="readUser" layoutX="547.0" layoutY="103.0" mnemonicParsing="false" text="Read User" />
+      <Button fx:id="readByName" layoutX="535.0" layoutY="64.0" mnemonicParsing="false" text="Read By Name" />
+      <Button fx:id="readByNameEmail" layoutX="508.0" layoutY="26.0" mnemonicParsing="false" text="Read By Name and Email" />
       <!--<Button fx:id="findByNameAndAddress" layoutX="40.0" layoutY="169.0" mnemonicParsing="false" onAction="#findByNameAndAddress" text="Find by Name &amp; Address" />
       <Button fx:id="createPackageRoute" layoutX="225.0" layoutY="77.0" mnemonicParsing="false" onAction="#createPackageRoute" text="Create Package Route" />
       <Button fx:id="updatePackageRoute" layoutX="225.0" layoutY="137.0" mnemonicParsing="false" onAction="#updatePackageRoute" text="Update Package Route" />
