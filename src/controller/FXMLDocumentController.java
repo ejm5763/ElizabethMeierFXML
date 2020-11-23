@@ -84,7 +84,7 @@ public class FXMLDocumentController implements Initializable {
     private Button showDetails;
     
     @FXML
-    private Button showDetailsInPlace;
+    private Button showDetailsInPlaceButton;
 
     @FXML
     private TableView<Usermodel> userTable;

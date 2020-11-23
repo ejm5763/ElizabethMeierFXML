@@ -34,7 +34,7 @@
       <Button fx:id="readByNameAndEmail" layoutX="508.0" layoutY="26.0" mnemonicParsing="false" onAction="#readByNameEmail" text="Read By Name and Email" />
       <Button fx:id="advancedSearch" layoutX="367.0" layoutY="183.0" mnemonicParsing="false" onAction="#searchByNameAdvancedAction" text="Advanced Search" />
       <Button fx:id="showDetails" layoutX="421.0" layoutY="475.0" mnemonicParsing="false" onAction="#actionShowDetails" text="Show Details" />
-      <Button fx:id="showDetailsInPlace" layoutX="518.0" layoutY="475.0" mnemonicParsing="false" text="Show Details In Place" />
+      <Button fx:id="showDetailsInPlaceButton" layoutX="518.0" layoutY="475.0" mnemonicParsing="false" onAction="#actionShowDetailsInPlace" text="Show Details In Place" />
       <!--<Button fx:id="findByNameAndAddress" layoutX="40.0" layoutY="169.0" mnemonicParsing="false" onAction="#findByNameAndAddress" text="Find by Name &amp; Address" />
       <Button fx:id="createPackageRoute" layoutX="225.0" layoutY="77.0" mnemonicParsing="false" onAction="#createPackageRoute" text="Create Package Route" />
       <Button fx:id="updatePackageRoute" layoutX="225.0" layoutY="137.0" mnemonicParsing="false" onAction="#updatePackageRoute" text="Update Package Route" />

@@ -48,7 +48,7 @@ public class DetailedModelViewController {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         
         //  option 2: get current stage -- from backbutton        
-        // Stage stage = (Stage)backButton.getScene().getWindow();
+        //Stage stage = (Stage)backButton.getScene().getWindow();
         
         if (previousScene != null) {
             stage.setScene(previousScene);
@@ -83,7 +83,7 @@ public class DetailedModelViewController {
 
     @FXML // This method is called by the FXMLLoader when initialization is complete
     void initialize() {
-        assert backButton != null : "fx:id=\"backButton\" was not injected: check your FXML file 'DetailedModelView.fxml'.";
+        assert backButton != null : "fx:id=\"backButtong\" was not injected: check your FXML file 'DetailedModelView.fxml'.";
         assert labelID != null : "fx:id=\"labelID\" was not injected: check your FXML file 'DetailedModelView.fxml'.";
         assert labelValue != null : "fx:id=\"labelValue\" was not injected: check your FXML file 'DetailedModelView.fxml'.";
         assert image != null : "fx:id=\"image\" was not injected: check your FXML file 'DetailedModelView.fxml'.";
